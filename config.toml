@@ -4,12 +4,6 @@ title = 'Phat Mai Blog'
 theme = 'PaperMod'
 
 [params]
-  # QUAN TRỌNG: Dòng này báo cho Hugo biết bài viết nằm trong folder 'posts'
-  mainSections = ["posts"]
-  
-  env = "production"
-  description = "Blog cá nhân về CTF, Security và Development"
-  author = "Phat Mai"
   defaultTheme = "auto"
   ShowReadingTime = true
   ShowShareButtons = true
@@ -23,6 +17,10 @@ theme = 'PaperMod'
   [[params.socialIcons]]
     name = "github"
     url = "https://github.com/pzhat"
+
+# QUAN TRỌNG: mainSections phải nằm TRONG [params]
+[params.mainSections]
+  mainSections = ["posts"]
 
 [[menu.main]]
   identifier = "home"
