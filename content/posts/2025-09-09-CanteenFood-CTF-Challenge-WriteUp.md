@@ -1,5 +1,5 @@
 ---
-date: 2026-04-10T00:00:00+07:00
+date: 2025-11-17T00:00:00+07:00
 title: CanteenFood CTF Challenge WriteUp
 categories: [pentesting, Web-Exploitation, CTF]
 tags: [CTF, Web]

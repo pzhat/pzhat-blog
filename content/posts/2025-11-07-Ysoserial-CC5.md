@@ -1,5 +1,5 @@
 ---
-date: 2026-04-10T00:00:00+07:00
+date: 2025-12-11T00:00:00+07:00
 title: Ysoserial Commons Collections 5 Analyst
 categories: [pentesting, Web-Exploitation]
 tags: [Web, ysoserial]

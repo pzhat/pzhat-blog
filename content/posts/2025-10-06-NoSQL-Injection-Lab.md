@@ -1,5 +1,5 @@
 ---
-date: 2026-04-10T00:00:00+07:00
+date: 2025-12-01T00:00:00+07:00
 title: NoSQL Injection Vulnerability Challenge Java
 categories: [pentesting, Web-Exploitation]
 tags: [Web]

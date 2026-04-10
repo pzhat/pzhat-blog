@@ -1,5 +1,5 @@
 ---
-date: 2026-04-10T00:00:00+07:00
+date: 2025-12-07T00:00:00+07:00
 title: Ired.Team From Domain Admin to Enterprise Admin
 categories: [RedTeam, pentesting]
 tags: [RedTeam, Pentest, iredteam]

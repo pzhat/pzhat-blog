@@ -1,5 +1,5 @@
 ---
-date: 2026-04-10T00:00:00+07:00
+date: 2025-11-28T00:00:00+07:00
 title: WebSec.fr level 1 CTF challenge
 categories: [pentesting, Web-Exploitation, CTF]
 tags: [CTF, Web]
