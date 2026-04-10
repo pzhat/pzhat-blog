@@ -3,44 +3,72 @@ languageCode = 'en-us'
 title = 'Phat Mai Blog'
 theme = 'PaperMod'
 
+# SEO & Meta
 [params]
-  defaultTheme = 'auto'  # hoặc 'light', 'dark'
+  env = "production"
+  description = "Blog cá nhân về CTF, Security và Development"
+  author = "Phat Mai"
+  defaultTheme = "auto"
+  
+  # Display settings
   ShowReadingTime = true
   ShowShareButtons = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
+  ShowToc = true
+  ShowRssButtonInSectionTermList = true
+  ShowAllPagesInArchive = true
+  ShowPageNums = true
   comments = false
   
-  # Home-Page Mode (dạng list bài viết)
-  homeInfoParams = { Title = "Hello", Content = "Mình chia sẻ về CTF, Security, và Dev stuff." }
+  # Home page config
+  homeInfoParams = { Title = "Hello", Content = "Welcome to my blog. Nơi chia sẻ về CTF writeups, security research và development stuff." }
   
-  # Social Icons
+  # Social icons
   [[params.socialIcons]]
     name = "github"
-    url = "https://github.com/yourusername"
+    url = "https://github.com/pzhat"
   [[params.socialIcons]]
-    name = "twitter" 
-    url = "https://twitter.com/yourusername"
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/phat-mai-hong-2580a52aa/"
 
-# Menu
+# Menu navigation
+[[menu.main]]
+  identifier = "home"
+  name = "Home"
+  url = "/"
+  weight = 1
+
 [[menu.main]]
   identifier = "posts"
   name = "Posts"
   url = "/posts/"
-  weight = 10
+  weight = 2
+
+[[menu.main]]
+  identifier = "archives"
+  name = "Archives"
+  url = "/archives/"
+  weight = 3
 
 [[menu.main]]
   identifier = "categories"
   name = "Categories"
   url = "/categories/"
-  weight = 20
+  weight = 4
 
 [[menu.main]]
   identifier = "tags"
   name = "Tags"
   url = "/tags/"
-  weight = 30
+  weight = 5
+
+[[menu.main]]
+  identifier = "about"
+  name = "About"
+  url = "/about/"
+  weight = 6
 
 # Output formats
 [outputs]
@@ -50,3 +78,30 @@ theme = 'PaperMod'
 [taxonomies]
   category = "categories"
   tag = "tags"
+  series = "series"
+
+# Build settings
+enableInlineShortcodes = true
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+enableEmoji = true
+pygmentsUseClasses = true
+
+# Main sections
+[params.mainSections]
+  mainSections = ["posts"]
+
+# Assets
+[assets]
+  disableHLJS = false
+
+# Markup settings
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false
+    style = "monokai"

@@ -1,0 +1,89 @@
+/* Custom styles for PaperMod */
+
+/* Better link styling */
+.post-content a {
+    color: #2962ff;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.post-content a:hover {
+    border-bottom-color: #2962ff;
+}
+
+/* Better image handling */
+.post-content img {
+    margin: 2rem auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Code block improvements */
+.post-content pre {
+    border-radius: 8px;
+    margin: 1.5rem 0;
+}
+
+.post-content code {
+    border-radius: 4px;
+    padding: 0.2em 0.4em;
+}
+
+/* Table of Contents */
+.toc {
+    background: var(--code-bg);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1.5rem 0;
+}
+
+/* Better tables */
+.post-content table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1.5rem 0;
+}
+
+.post-content table th,
+.post-content table td {
+    border: 1px solid var(--border);
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.post-content table tr:nth-child(2n) {
+    background: var(--code-bg);
+}
+
+/* Blockquote styling */
+.post-content blockquote {
+    border-left: 4px solid #2962ff;
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: var(--secondary);
+}
+
+/* Heading improvements */
+.post-content h1,
+.post-content h2,
+.post-content h3 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+/* List spacing */
+.post-content ul,
+.post-content ol {
+    margin: 1rem 0;
+    padding-left: 2rem;
+}
+
+.post-content li {
+    margin: 0.5rem 0;
+}
