@@ -1,3 +1,17 @@
 baseURL = 'https://blog.pzhat.id.vn/'
 languageCode = 'en-us'
 title = 'Phat Mai Blog'
+theme = 'PaperMod'
+
+[params]
+  defaultTheme = 'auto'
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 10
