@@ -19,7 +19,7 @@ theme = 'PaperMod'
   [params.profileMode]
     enabled = true
     title = "Phat Mai"
-    subtitle = "Security Researcher & CTF Player 🔐 | Chia sẻ writeup, vulnerability analysis và dev stuff."
+    subtitle = "Security Researcher | Penetration tester"
     imageUrl = "https://github.com/pzhat.png"
     imageWidth = 160
     imageHeight = 160
@@ -39,11 +39,8 @@ theme = 'PaperMod'
     name = "github"
     url = "https://github.com/pzhat"
   [[params.socialIcons]]
-    name = "twitter"
-    url = "https://twitter.com/pzhat"
-  [[params.socialIcons]]
     name = "linkedin"
-    url = "https://linkedin.com/in/phatmai"
+    url = "https://www.linkedin.com/in/phat-mai-hong-2580a52aa/"
 
   [params.mainSections]
     mainSections = ["posts"]
