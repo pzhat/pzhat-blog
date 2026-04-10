@@ -4,6 +4,9 @@ title = 'Phat Mai Blog'
 theme = 'PaperMod'
 
 [params]
+  env = "production"
+  description = "Blog cá nhân về CTF, Security và Development"
+  author = "Phat Mai"
   defaultTheme = "auto"
   ShowReadingTime = true
   ShowShareButtons = true
@@ -12,15 +15,38 @@ theme = 'PaperMod'
   ShowCodeCopyButtons = true
   ShowToc = true
   comments = false
-  homeInfoParams = { Title = "Hello", Content = "Welcome to my blog" }
-  
+
+  [params.profileMode]
+    enabled = true
+    title = "Phat Mai"
+    subtitle = "Security Researcher & CTF Player 🔐 | Chia sẻ writeup, vulnerability analysis và dev stuff."
+    imageUrl = "https://github.com/pzhat.png"
+    imageWidth = 160
+    imageHeight = 160
+    imageTitle = "Phat Mai"
+    
+    [[params.profileMode.buttons]]
+      name = "📚 Posts"
+      url = "/posts/"
+    [[params.profileMode.buttons]]
+      name = "🐙 GitHub"
+      url = "https://github.com/pzhat"
+    [[params.profileMode.buttons]]
+      name = "📧 About"
+      url = "/about/"
+
   [[params.socialIcons]]
     name = "github"
     url = "https://github.com/pzhat"
+  [[params.socialIcons]]
+    name = "twitter"
+    url = "https://twitter.com/pzhat"
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://linkedin.com/in/phatmai"
 
-# QUAN TRỌNG: mainSections phải nằm TRONG [params]
-[params.mainSections]
-  mainSections = ["posts"]
+  [params.mainSections]
+    mainSections = ["posts"]
 
 [[menu.main]]
   identifier = "home"
@@ -54,12 +80,31 @@ theme = 'PaperMod'
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]
 
 [taxonomies]
   category = "categories"
   tag = "tags"
+  series = "series"
+
+enableInlineShortcodes = true
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+enableEmoji = true
+pygmentsUseClasses = true
+
+[assets]
+  disableHLJS = false
 
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+  [markup.highlight]
+    noClasses = false
+    style = "monokai"
+    tabWidth = 4
