@@ -3,8 +3,10 @@ languageCode = 'en-us'
 title = 'Phat Mai Blog'
 theme = 'PaperMod'
 
-# ==================== PARAMS (CHỈ MỘT SECTION DUY NHẤT) ====================
 [params]
+  # QUAN TRỌNG: Dòng này báo cho Hugo biết bài viết nằm trong folder 'posts'
+  mainSections = ["posts"]
+  
   env = "production"
   description = "Blog cá nhân về CTF, Security và Development"
   author = "Phat Mai"
@@ -15,23 +17,13 @@ theme = 'PaperMod'
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
   ShowToc = true
-  ShowRssButtonInSectionTermList = true
-  ShowAllPagesInArchive = true
-  ShowPageNums = true
   comments = false
+  homeInfoParams = { Title = "Xin chào 👋", Content = "Chào mừng đến với blog của mình." }
   
-  # Home page config
-  homeInfoParams = { Title = "Xin chào 👋", Content = "Chào mừng đến với blog của mình. Nơi chia sẻ về CTF writeups, security research và development stuff." }
-  
-  # Social Icons
   [[params.socialIcons]]
     name = "github"
     url = "https://github.com/pzhat"
-  [[params.socialIcons]]
-    name = "linkedin"
-    url = "https://www.linkedin.com/in/phat-mai-hong-2580a52aa/"
 
-# ==================== MENU NAVIGATION ====================
 [[menu.main]]
   identifier = "home"
   name = "Home"
@@ -45,61 +37,31 @@ theme = 'PaperMod'
   weight = 2
 
 [[menu.main]]
-  identifier = "archives"
-  name = "Archives"
-  url = "/archives/"
-  weight = 3
-
-[[menu.main]]
   identifier = "categories"
   name = "Categories"
   url = "/categories/"
-  weight = 4
+  weight = 3
 
 [[menu.main]]
   identifier = "tags"
   name = "Tags"
   url = "/tags/"
-  weight = 5
+  weight = 4
 
 [[menu.main]]
   identifier = "about"
   name = "About"
   url = "/about/"
-  weight = 6
+  weight = 5
 
-# ==================== OUTPUTS & TAXONOMIES ====================
 [outputs]
   home = ["HTML", "RSS", "JSON"]
-  section = ["HTML", "RSS"]
-  taxonomy = ["HTML", "RSS"]
-  term = ["HTML", "RSS"]
 
 [taxonomies]
   category = "categories"
   tag = "tags"
-  series = "series"
-
-# ==================== MARKUP & BUILD SETTINGS ====================
-enableInlineShortcodes = true
-enableRobotsTXT = true
-buildDrafts = false
-buildFuture = false
-buildExpired = false
-enableEmoji = true
-pygmentsUseClasses = true
-
-[params.mainSections]
-  mainSections = ["posts"]
-
-[assets]
-  disableHLJS = false
 
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
-  [markup.highlight]
-    noClasses = false
-    style = "monokai"
-    tabWidth = 4
