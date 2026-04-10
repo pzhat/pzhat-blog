@@ -12,7 +12,7 @@ theme = 'PaperMod'
   ShowCodeCopyButtons = true
   ShowToc = true
   comments = false
-  homeInfoParams = { Title = "Xin chào 👋", Content = "Chào mừng đến với blog của mình." }
+  homeInfoParams = { Title = "Hello", Content = "Welcome to my blog" }
   
   [[params.socialIcons]]
     name = "github"
