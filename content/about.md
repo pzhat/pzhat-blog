@@ -1,7 +1,8 @@
 ---
 title: "About"
-date: 2026-04-10T06:13:36Z
-draft: true
+date: 2026-04-10
+draft: false
+layout: "about"
 ---
 
 # $_Whoami_$

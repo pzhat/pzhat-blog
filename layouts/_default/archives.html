@@ -1,0 +1,24 @@
+{{ define "main" }}
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ .Title }}</h1>
+  </header>
+  
+  <div class="post-content">
+    {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+    {{ range $pages.GroupByDate "2006" }}
+    <h2>{{ .Key }}</h2>
+    <ul>
+      {{ range .Pages }}
+      <li>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        <span style="color: var(--secondary); font-size: 0.9em;">
+          ({{ .Date.Format "Jan 2" }})
+        </span>
+      </li>
+      {{ end }}
+    </ul>
+    {{ end }}
+  </div>
+</article>
+{{ end }}
