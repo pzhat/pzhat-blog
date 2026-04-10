@@ -3,14 +3,12 @@ languageCode = 'en-us'
 title = 'Phat Mai Blog'
 theme = 'PaperMod'
 
-# SEO & Meta
+# ==================== PARAMS (CHỈ MỘT SECTION DUY NHẤT) ====================
 [params]
   env = "production"
   description = "Blog cá nhân về CTF, Security và Development"
   author = "Phat Mai"
   defaultTheme = "auto"
-  
-  # Display settings
   ShowReadingTime = true
   ShowShareButtons = true
   ShowPostNavLinks = true
@@ -23,9 +21,9 @@ theme = 'PaperMod'
   comments = false
   
   # Home page config
-  homeInfoParams = { Title = "Hello", Content = "Welcome to my blog. Nơi chia sẻ về CTF writeups, security research và development stuff." }
+  homeInfoParams = { Title = "Xin chào 👋", Content = "Chào mừng đến với blog của mình. Nơi chia sẻ về CTF writeups, security research và development stuff." }
   
-  # Social icons
+  # Social Icons
   [[params.socialIcons]]
     name = "github"
     url = "https://github.com/pzhat"
@@ -33,7 +31,7 @@ theme = 'PaperMod'
     name = "linkedin"
     url = "https://www.linkedin.com/in/phat-mai-hong-2580a52aa/"
 
-# Menu navigation
+# ==================== MENU NAVIGATION ====================
 [[menu.main]]
   identifier = "home"
   name = "Home"
@@ -70,17 +68,19 @@ theme = 'PaperMod'
   url = "/about/"
   weight = 6
 
-# Output formats
+# ==================== OUTPUTS & TAXONOMIES ====================
 [outputs]
   home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]
 
-# Taxonomies
 [taxonomies]
   category = "categories"
   tag = "tags"
   series = "series"
 
-# Build settings
+# ==================== MARKUP & BUILD SETTINGS ====================
 enableInlineShortcodes = true
 enableRobotsTXT = true
 buildDrafts = false
@@ -89,15 +89,12 @@ buildExpired = false
 enableEmoji = true
 pygmentsUseClasses = true
 
-# Main sections
 [params.mainSections]
   mainSections = ["posts"]
 
-# Assets
 [assets]
   disableHLJS = false
 
-# Markup settings
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
@@ -105,16 +102,4 @@ pygmentsUseClasses = true
   [markup.highlight]
     noClasses = false
     style = "monokai"
-# Sort settings
-[params]
-  orderBy = "date"
-  orderDesc = true
-
-# Hoặc thêm vào section config
-[taxonomies]
-  category = "categories"
-  tag = "tags"
-
-[outputs]
-  home = ["HTML", "RSS", "JSON"]
-  section = ["HTML", "RSS"]
+    tabWidth = 4
