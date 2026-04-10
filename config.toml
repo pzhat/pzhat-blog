@@ -4,17 +4,31 @@ title = 'Phat Mai Blog'
 theme = 'PaperMod'
 
 [params]
-  defaultTheme = 'auto'
+  defaultTheme = 'auto'  # hoặc 'light', 'dark'
   ShowReadingTime = true
   ShowShareButtons = true
   ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  comments = false
+  
+  # Home-Page Mode (dạng list bài viết)
+  homeInfoParams = { Title = "Hello", Content = "Mình chia sẻ về CTF, Security, và Dev stuff." }
+  
+  # Social Icons
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/yourusername"
+  [[params.socialIcons]]
+    name = "twitter" 
+    url = "https://twitter.com/yourusername"
 
-[menu]
-  [[menu.main]]
-    identifier = "posts"
-    name = "Posts"
-    url = "/posts/"
-    weight = 10
+# Menu
+[[menu.main]]
+  identifier = "posts"
+  name = "Posts"
+  url = "/posts/"
+  weight = 10
 
 [[menu.main]]
   identifier = "categories"
@@ -27,3 +41,12 @@ theme = 'PaperMod'
   name = "Tags"
   url = "/tags/"
   weight = 30
+
+# Output formats
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+# Taxonomies
+[taxonomies]
+  category = "categories"
+  tag = "tags"
