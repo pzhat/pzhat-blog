@@ -105,3 +105,16 @@ pygmentsUseClasses = true
   [markup.highlight]
     noClasses = false
     style = "monokai"
+# Sort settings
+[params]
+  orderBy = "date"
+  orderDesc = true
+
+# Hoặc thêm vào section config
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS"]

@@ -1,4 +1,5 @@
 ---
+date: 2026-04-10T00:00:00+07:00
 title: Java Servlet Command Injection Vulnerability Challenges
 categories: [pentesting, Web-Exploitation]
 tags: [Web]
