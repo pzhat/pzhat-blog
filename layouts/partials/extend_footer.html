@@ -1,56 +1,43 @@
-<!-- Custom Google Translate Widget -->
+<!-- Google Translate Widget - Fixed -->
 <style>
-  /* 1. Ẩn thanh banner Google dính trên cùng */
-  .skiptranslate { display: none !important; }
+  /* Chỉ ẩn thanh banner dính trên đầu, KHÔNG ẩn nút */
+  .goog-te-banner-frame { display: none !important; }
   body { top: 0 !important; }
 
-  /* 2. Giấu text "Cung cấp bởi Google" */
-  .goog-te-gadget {
-    font-size: 0 !important;
-    color: transparent !important;
-  }
-  .goog-te-gadget span {
-    display: none !important;
-  }
-
-  /* 3. Style lại cái nút chọn ngôn ngữ cho đẹp */
-  select.goog-te-combo {
-    /* Dùng màu của theme (Dark/Light tự đổi) */
-    background-color: var(--code-bg); 
-    color: var(--primary);
-    border: 1px solid var(--border);
-    border-radius: 20px; /* Bo tròn viên thuốc */
-    padding: 6px 14px;
-    font-size: 0.85rem;
-    font-family: inherit;
-    cursor: pointer;
-    outline: none;
-    transition: all 0.3s ease;
-    appearance: none; /* Ẩn mũi tên mặc định ugly của trình duyệt */
-    
-    /* Thêm icon mũi tên xịn xò bằng CSS */
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23888888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    padding-right: 30px;
-  }
-
-  /* Hiệu ứng khi rê chuột */
-  select.goog-te-combo:hover {
-    border-color: var(--primary);
-    background-color: var(--entry);
-  }
-
-  /* Wrapper để căn chỉnh */
-  .translate-container {
+  /* Container nút */
+  .translate-wrapper {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 999;
+    z-index: 9999;
   }
+
+  /* Style nút chọn ngôn ngữ */
+  select.goog-te-combo {
+    background-color: var(--entry, #1c1c1e);
+    color: var(--primary, #e0e0e0);
+    border: 1px solid var(--border, #333);
+    border-radius: 20px;
+    padding: 8px 32px 8px 14px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    transition: all 0.2s ease;
+  }
+  select.goog-te-combo:hover {
+    border-color: var(--primary, #888);
+  }
+
+  /* Ẩn text "Cung cấp bởi Google" nhưng giữ nguyên select box */
+  .goog-te-gadget { font-size: 0 !important; }
+  .goog-te-gadget span { display: none !important; }
 </style>
 
-<div class="translate-container">
+<div class="translate-wrapper">
   <div id="google_translate_element"></div>
 </div>
 
@@ -58,7 +45,7 @@
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({
       pageLanguage: 'vi',
-      includedLanguages: 'vi,en,zh-CN,ja,ko', // Thêm ngôn ngữ bạn muốn (en, zh, ja, ko...)
+      includedLanguages: 'vi,en',
       layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
       autoDisplay: false
     }, 'google_translate_element');
