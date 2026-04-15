@@ -1,0 +1,28 @@
+{{- /* Nút dịch trang tự động (Client-side) */ -}}
+<div id="google_translate_element" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; background: var(--theme); border-radius: 12px; padding: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);"></div>
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'vi',
+      includedLanguages: 'vi,en',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<style>
+  /* Ẩn thanh Google Translate gốc, chỉ giữ nút dropdown */
+  .goog-te-gadget { font-size: 0 !important; }
+  .goog-te-gadget span { display: none !important; }
+  .goog-te-combo { 
+    background: var(--theme); 
+    color: var(--primary); 
+    border: 1px solid var(--border); 
+    border-radius: 8px; 
+    padding: 6px 10px; 
+    cursor: pointer;
+  }
+</style>
